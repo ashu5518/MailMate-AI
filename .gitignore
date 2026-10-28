@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.log
+.streamlit/secrets.toml
+.pytest_cache/
+artifacts/
+*.zip
+.mailmate-extension-token
+share-packages/

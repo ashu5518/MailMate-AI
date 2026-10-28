@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "MailMate AI — Gmail Assistant",
+  "version": "1.1.0",
+  "description": "Understand emails, draft replies and correct your writing in Gmail.",
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://127.0.0.1:8765/*", "https://mail.google.com/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html", "default_title": "MailMate AI"},
+  "content_scripts": [{"matches": ["https://mail.google.com/*"], "js": ["content.js", "inline.js"], "run_at": "document_idle"}]
+}
